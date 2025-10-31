@@ -51,7 +51,7 @@ export const CardPreview = ({ customization }: CardPreviewProps) => {
             transition={{ delay: 0.2 }}
             className={`${
               fontFamilyMap[fontFamily as keyof typeof fontFamilyMap]
-            } text-5xl font-bold tracking-tight md:text-6xl`}
+            } text-4xl font-bold tracking-tight md:text-6xl`}
             style={{ color: fontColor }}
           >
             Thank You
