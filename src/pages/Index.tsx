@@ -157,20 +157,30 @@ const Index = () => {
               <motion.div
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                className="mt-12 flex items-center justify-center gap-4"
+                className="
+                mt-12 flex flex-wrap items-center justify-center 
+                gap-6 sm:gap-8 md:gap-10
+                text-sm sm:text-base
+              "
               >
                 <Button
                   variant="outline"
                   size="lg"
                   onClick={() => handlePageChange(currentPage - 1)}
                   disabled={currentPage === 1}
-                  className="gap-2"
+                  className="gap-2 px-4 sm:px-6"
                 >
                   <ChevronLeft className="h-4 w-4" />
-                  Previous
+                  <span className="hidden xs:inline">Previous</span>
                 </Button>
 
-                <div className="rounded-lg bg-card px-4 py-2 text-card-foreground">
+                <div
+                  className="
+                  rounded-lg bg-card px-4 py-2 
+                  text-card-foreground text-center text-sm sm:text-base
+                  flex-shrink-0
+                "
+                >
                   Page {currentPage} of {Math.min(totalPages, 10)}
                 </div>
 
@@ -179,9 +189,9 @@ const Index = () => {
                   size="lg"
                   onClick={() => handlePageChange(currentPage + 1)}
                   disabled={currentPage >= totalPages || currentPage >= 10}
-                  className="gap-2"
+                  className="gap-2 px-4 sm:px-6"
                 >
-                  Next
+                  <span className="hidden xs:inline">Next</span>
                   <ChevronRight className="h-4 w-4" />
                 </Button>
               </motion.div>
